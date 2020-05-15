@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Byrds Capacitor Contacts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Byrds </ion-title>
+      <ion-title>Capacitor Contacts</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+      <div class="ion-text-start">
+        <ion-button (click)="getPermissions()" >
+          Get Permission
+        </ion-button>
+        <ion-button (click)="getContacts()">
+          Fetch Contacts
+        </ion-button>
+      </div>
+      <ion-item *ngFor="let contact of contacts | async" >
+        <ion-icon color="primary" slot="start" name="beer"></ion-icon>
+        <ion-label class="ion-text-wrap">
+          <ion-text color="dark">
+            <h3>{{contact.displayName}}</h3>
+          </ion-text>
+          <ion-text color="medium">
+            <p>{{contact.phoneNumbers}}</p>
+          </ion-text>
+          <ion-text color="medium">
+            <p>{{contact.emails}}</p>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>
+</ion-content>
