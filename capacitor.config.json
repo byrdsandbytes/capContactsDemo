@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "capContactsDemo",
+  "appId": "ch.byrds.capContacts",
+  "appName": "capContacts",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
@@ -9,9 +9,5 @@
       "launchShowDuration": 0
     }
   },
-  "cordova": {},
-  "server": {
-    "url": "http://localhost:8100",
-    "cleartext": true
-  }
+  "cordova": {}
 }
