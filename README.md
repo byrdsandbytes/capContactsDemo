@@ -10,7 +10,7 @@ A Demo showing the usage of Capcitor Contacts Plugin. A native Capcitor plugin t
 
 iOS             |  Android
 :-------------------------:|:-------------------------:
-<img src="https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenIOS.png" width="400">  |  <img src="https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenPixel.png" width="400">
+<img src="https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenIOS.png" width="400">  |  <img src="https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenPixel.png" width="350">
 
 ## Getting Started
 
@@ -45,18 +45,13 @@ npx cap open android
 ```
 
 
+## Built With
+- Angular
+- Capacitor 
+- Ionic
 
-### Installing
+## Authors
+-Idrimi 
 
-Install:
-```
-npm i --save @byrds/capacitor-contacts
-```
-Sync:
-````
-ionic capacitor sync
-````
-Run iOS using livereload:
-````
-ionic capacitor run ios --l
-````
+## License
+MIT
