@@ -54,4 +54,4 @@ npx cap open android
 -Idrimi 
 
 ## License
-MIT
+GPL v3
