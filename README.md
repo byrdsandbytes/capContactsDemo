@@ -4,9 +4,9 @@ A Demo showing the usage of Capcitor Contacts Plugin. A native Capcitor plugin t
 
 
 
-<img src="https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenIOS.png" width="100">
+<img src="https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenIOS.png" width="400">
 
-<img src="https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenPixel.png" width="100">
+<img src="https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenPixel.png" width="400">
 
 
 ## Getting Started
