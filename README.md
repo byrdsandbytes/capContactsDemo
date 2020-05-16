@@ -2,8 +2,11 @@
 
 A Demo showing the usage of Capcitor Contacts Plugin. A native Capcitor plugin to manage phone contacts. Built for Angular hybrid apps.
 
-![alt text](https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenIOS.png "iOS Screenshot")
-![alt text](https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenPixel.png "Android Screenshot")
+
+
+<img src="https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenIOS.png" width="100">
+
+<img src="https://github.com/byrdsandbytes/capContactsDemo/raw/master/imgs/screenPixel.png" width="100">
 
 
 ## Getting Started
