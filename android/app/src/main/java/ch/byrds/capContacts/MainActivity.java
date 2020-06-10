@@ -4,10 +4,9 @@ import android.os.Bundle;
 
 import com.getcapacitor.BridgeActivity;
 import com.getcapacitor.Plugin;
+import ch.byrds.capacitorContacts.CapContacts;
 
 import java.util.ArrayList;
-
-import ch.byrds.capacitorContacts.CapContacts;
 
 public class MainActivity extends BridgeActivity {
   @Override
