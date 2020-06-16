@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 import { Observable, of } from 'rxjs';
 import { PhoneContact } from '../phone-contact';
-const { CapContacts } = Plugins;
+const { Contacts } = Plugins;
 
 @Component({
   selector: 'app-home',
@@ -23,12 +23,12 @@ export class HomePage {
   constructor() {}
 
   async getPermissions(): Promise<void> {
-    CapContacts.getPermissions();
+    Contacts.getPermissions();
   }
 
   async getContacts(): Promise<void> {
     console.log('tesbutton clicked');
-    CapContacts.getContacts().then(result => {
+    Contacts.getContacts().then(result => {
       console.log('result is:' , result);
       const phoneContacts: [PhoneContact] = result.contacts;
       this.contacts = of(phoneContacts);

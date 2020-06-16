@@ -4,9 +4,10 @@ import android.os.Bundle;
 
 import com.getcapacitor.BridgeActivity;
 import com.getcapacitor.Plugin;
-import ch.byrds.capacitorContacts.CapContacts;
 
 import java.util.ArrayList;
+
+import ch.byrds.capacitor.contacts.Contacts;
 
 public class MainActivity extends BridgeActivity {
   @Override
@@ -17,7 +18,7 @@ public class MainActivity extends BridgeActivity {
     this.init(savedInstanceState, new ArrayList<Class<? extends Plugin>>() {{
       // Additional plugins you've installed go here
       // Ex: add(TotallyAwesomePlugin.class);
-      add(CapContacts.class);
+      add(Contacts.class);
     }});
   }
 }
