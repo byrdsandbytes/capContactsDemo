@@ -22,17 +22,17 @@
           Fetch Contacts
         </ion-button>
       </div>
-      <ion-item *ngFor="let contact of contacts | async" >
+      <ion-item *ngFor="let contact of contact$ | async" >
         <ion-icon color="primary" slot="start" name="beer"></ion-icon>
         <ion-label class="ion-text-wrap">
           <ion-text color="dark">
             <h3>{{contact.displayName}}</h3>
           </ion-text>
           <ion-text color="medium">
-            <p>{{contact.phoneNumbers}}</p>
+            <p><span *ngFor="let phone of contact.phoneNumbers">{{ phone.label }}: {{ phone.number }}; </span></p>
           </ion-text>
           <ion-text color="medium">
-            <p>{{contact.emails}}</p>
+            <p><span *ngFor="let email of contact.emails">{{ email.label }}: {{ email.address }}; </span></p>
           </ion-text>
         </ion-label>
       </ion-item>
