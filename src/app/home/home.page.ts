@@ -1,7 +1,7 @@
+import { Contact } from './../phone-contact';
 import { Component } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 import { Observable, of } from 'rxjs';
-import { PhoneContact } from '../phone-contact';
 const { Contacts } = Plugins;
 
 @Component({
@@ -19,7 +19,7 @@ const { Contacts } = Plugins;
 // }
 
 export class HomePage {
-  contacts: Observable<PhoneContact[]>;
+  contacts: Observable<Contact[]>;
   constructor() {}
 
   async getPermissions(): Promise<void> {
@@ -30,7 +30,7 @@ export class HomePage {
     console.log('tesbutton clicked');
     Contacts.getContacts().then(result => {
       console.log('result is:' , result);
-      const phoneContacts: [PhoneContact] = result.contacts;
+      const phoneContacts: [Contact] = result.contacts;
       this.contacts = of(phoneContacts);
 
     });
