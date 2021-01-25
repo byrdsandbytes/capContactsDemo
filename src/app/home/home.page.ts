@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 import { Observable, of } from 'rxjs';
-import { PhoneContact } from '../phone-contact';
+import { Contact } from '@capacitor-community/contacts'
+
 const { Contacts } = Plugins;
 
 @Component({
@@ -10,16 +11,8 @@ const { Contacts } = Plugins;
   styleUrls: ['home.page.scss'],
 })
 
-// export interface PhoneContact {
-//   contactId: string;
-//   lookupKey: string;
-//   displayName: string;
-//   phoneNumbers: [string];
-//   emails: [string];
-// }
-
 export class HomePage {
-  contacts: Observable<PhoneContact[]>;
+  contact$: Observable<Contact[]>;
   constructor() {}
 
   async getPermissions(): Promise<void> {
@@ -28,11 +21,8 @@ export class HomePage {
 
   async getContacts(): Promise<void> {
     console.log('tesbutton clicked');
-    Contacts.getContacts().then(result => {
-      console.log('result is:' , result);
-      const phoneContacts: [PhoneContact] = result.contacts;
-      this.contacts = of(phoneContacts);
-
-    });
+    const result = await Contacts.getContacts();
+    console.log(result);
+    this.contact$ = of(result.contacts);
   }
 }
