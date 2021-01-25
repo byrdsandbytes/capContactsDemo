@@ -28,11 +28,11 @@
           <ion-text color="dark">
             <h3>{{contact.displayName}}</h3>
           </ion-text>
-          <ion-text color="medium">
-            <p>{{contact.phoneNumbers}}</p>
+          <ion-text color="medium" *ngFor="let number of contact.phoneNumbers">
+            <p>{{number.label}}:{{number.number}}</p>
           </ion-text>
-          <ion-text color="medium">
-            <p>{{contact.emails}}</p>
+          <ion-text color="medium" *ngFor="let mails of contact.emails">
+            <p>{{mails.label}}: {{mails.address}}</p>
           </ion-text>
         </ion-label>
       </ion-item>
