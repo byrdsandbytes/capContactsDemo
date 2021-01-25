@@ -13,6 +13,7 @@ export interface Contact {
   displayName?: string;
   phoneNumbers: PhoneNumber[];
   emails: EmailAddress[];
+  photoThumbnail?: string;
   organizationName?: string;
   organizationRole?: string;
   birthday?: string;

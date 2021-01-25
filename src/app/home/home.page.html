@@ -24,6 +24,9 @@
       </div>
       <ion-item *ngFor="let contact of contacts | async" >
         <ion-icon color="primary" slot="start" name="beer"></ion-icon>
+        <ion-avatar slot="start">
+          <ion-img [src]="contact.photoThumbnail"></ion-img>
+        </ion-avatar>
         <ion-label class="ion-text-wrap">
           <ion-text color="dark">
             <h3>{{contact.displayName}}</h3>
