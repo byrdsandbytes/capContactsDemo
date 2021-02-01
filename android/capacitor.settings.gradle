@@ -2,5 +2,5 @@
 include ':capacitor-android'
 project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/android/capacitor')
 
-include ':byrds-capacitor-contacts'
-project(':byrds-capacitor-contacts').projectDir = new File('../node_modules/@byrds/capacitor-contacts/android')
+include ':capacitor-community-contacts'
+project(':capacitor-community-contacts').projectDir = new File('../node_modules/@capacitor-community/contacts/android')
