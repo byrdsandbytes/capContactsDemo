@@ -1,0 +1,6 @@
+[
+	{
+		"pkg": "@capacitor-community/contacts",
+		"classpath": "ch.byrds.capacitor.contacts.Contacts"
+	}
+]
