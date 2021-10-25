@@ -21,10 +21,13 @@
         <ion-button (click)="getContacts()">
           Fetch Contacts
         </ion-button>
+        <ion-button (click)="saveContact()">
+          Save Contacts
+        </ion-button>
       </div>
       <ion-item *ngFor="let contact of contacts | async" >
-        <ion-icon color="primary" slot="start" name="beer"></ion-icon>
-        <ion-avatar slot="start">
+        <ion-icon *ngIf="!contact.photoThumbnail" color="primary" slot="start" name="beer"></ion-icon>
+        <ion-avatar *ngIf="contact.photoThumbnail"  slot="start">
           <ion-img [src]="contact.photoThumbnail"></ion-img>
         </ion-avatar>
         <ion-label class="ion-text-wrap">
