@@ -1,8 +1,7 @@
-import { Contact} from './../phone-contact';
 import { Component } from '@angular/core';
-// import { Plugins } from '@capacitor/core';
 import { Observable, of } from 'rxjs';
-import {Contacts} from '@capacitor-community/contacts';
+import {Contact, Contacts, NewContact} from '@capacitor-community/contacts';
+import { ToastController } from '@ionic/angular';
 
 
 
@@ -22,7 +21,9 @@ import {Contacts} from '@capacitor-community/contacts';
 
 export class HomePage {
   contacts: Observable<Contact[]>;
-  constructor() {}
+  constructor(
+    private toastController: ToastController
+  ) {}
 
   async getPermissions(): Promise<void> {
     console.log('button clicked');
@@ -37,5 +38,19 @@ export class HomePage {
       this.contacts = of(phoneContacts);
 
     });
+  }
+
+  async saveContact(){
+    const newContact: NewContact = {
+      givenName: "Arthur",
+      familyName: "Dent"
+    }
+
+    Contacts.saveContact(newContact)
+    const toast = await this.toastController.create({
+      message: `${newContact.givenName} saved`,
+      duration: 2000
+    });
+    toast.present();
   }
 }
