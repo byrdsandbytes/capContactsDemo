@@ -2,9 +2,9 @@
 
 A Demo showing the usage of Capcitor Contacts Plugin. A native Capcitor plugin to manage phone contacts. Built for Angular hybrid apps.
 
-npm: https://www.npmjs.com/package/@byrds/capacitor-contacts
+npm: https://www.npmjs.com/package/@capacitor-community/contacts
 
-gitHub: https://github.com/byrdsandbytes/capacitor-contacts-plugin
+gitHub: https://github.com/capacitor-community/contacts
 
 
 
